@@ -1,5 +1,5 @@
-# self-adjoint
-Profile page for _self-adjoint_
+# self-adjoint.github.io
+Profile page for _self-adjoint.github.io_
 
 Created by **self-adjoint**, July 1, 2025
 
