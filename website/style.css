@@ -1,0 +1,156 @@
+
+    /* Nord Dark Theme */
+    :root {
+      --nord0: #2E3440;
+      --nord1: #3B4252;
+      --nord2: #434C5E;
+      --nord3: #4C566A;
+      --nord4: #D8DEE9;
+      --nord5: #E5E9F0;
+      --nord7: #8FBCBB;
+      --nord8: #88C0D0;
+      --nord9: #81A1C1;
+      --nord10: #5E81AC;
+      --nord11: #5E81AC;
+      --nord12: #BF616A;
+      --nord13: #D08770;
+      --nord14: #EBCB8B;
+      --nord15: #A3BE8C;
+      --nord16: #B48EAD;
+    }
+
+    body {
+      background-color: var(--nord0);
+      color: var(--nord4);
+      font-family: "Georgia", serif;
+      margin: 0;
+      padding: 0;
+      line-height: 1.6;
+    }
+
+    header {
+      background: var(--nord1);
+      padding: 1rem;
+    }
+
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 2rem;
+      flex-wrap: wrap;
+    }
+
+    nav a {
+      color: var(--nord8);
+      text-decoration: underline;
+      font-weight: bold;
+    }
+
+    nav a:hover {
+      color: var(--nord9);
+    }
+
+    main {
+      max-width: 700px;
+      margin: 2rem auto;
+      padding: 0 1rem;
+    }
+
+     a.current {/* Highlighting for the current page on the header*/
+	  color: var(--nord7); 
+	  text-decoration: underline;
+      font-weight: bold;
+     }
+
+    h1, h2, h3 {
+      color: var(--nord4);
+    }
+
+    footer {
+      text-align: center;
+      padding: 2rem;
+      color: var(--nord3);
+      font-size: 0.9rem;
+    }
+
+
+ul {
+  list-style-type: square;
+  padding-left: 1.5rem;
+}
+
+ul ul {
+  list-style-type: circle;
+  padding-left: 1.5rem;
+}
+
+a {
+  color: var(--nord8);
+  text-decoration: underline;
+}
+
+a:hover {
+      color: var(--nord9);
+    }
+
+section {
+  border: 2px dashed var(--nord2);
+  border-radius: 20px;
+  padding: 0.5rem 1rem 0rem 1rem;
+  margin-top: 2rem;
+}
+
+section h2 {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding: 0;
+  border-bottom: none;
+}
+
+
+/* Simple sections without a boarder */
+.simple-section {
+  border: none;
+  padding: 0;
+  border-radius: 0;
+}
+
+.simple-section:not(:first-child) {
+  margin-top: 0rem;
+}
+
+.simple-section h2 {
+  margin-top: 0;
+  margin-bottom: 0rem;
+  padding: 0;
+  border-bottom: none;
+}
+
+
+
+
+
+
+
+
+
+
+
+#welcome h1 {
+  color: var(--nord4)
+}
+
+#sitemap {
+  border: 2px dashed var(--nord7);
+  border-radius: 20px;
+  padding: 0.5rem 1rem 0rem 1rem;
+  margin-top: 2rem;
+}
+
+
+
+
+
+
+
+
