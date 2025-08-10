@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/x-mathjax-config">
+  MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+</script>
+<script type="text/javascript"
+  src="http://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.1/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+</script>
   <title>self-adjoint</title>
   <link rel="stylesheet" href="style.css">
 </head>
@@ -21,9 +27,38 @@
 
 <main id="welcome">
   <h1>Welcome 👋🏻</h1>
-  <p> this is a test! WRITE APPROX 285 WORDS HERE. <br>I hope for this website to serve as a comfortable hub for all of my projects. I am interested in both Applied </p>
-  <p>Nulla facilisi. Vestibulum sed semper augue. Suspendisse eget quam a quam maximus feugiat. Curabitur maximus, lorem vitae tempor congue, lorem nulla efficitur metus, sed varius sem purus a libero. Integer lacinia efficitur nunc, eget molestie ipsum tempus sit amet. Duis sed mattis arcu. Aenean id nunc risus. Sed facilisis erat vehicula interdum elementum. Aenean iaculis lorem lorem, nec elementum felis tristique non. Aliquam sit amet risus nisi. Ut lacinia dapibus sapien, at eleifend tortor varius non. Pellentesque facilisis ipsum ac nulla fringilla dapibus. Morbi sit amet dictum leo. Curabitur interdum ac urna vestibulum congue. Etiam ac quam cursus, vulputate eros eu, eleifend nulla. Nullam sit amet ligula iaculis, sagittis sem vel, iaculis ante.</p>
-  <p>In tincidunt risus sit amet tristique tempus. Ut volutpat felis sit amet augue volutpat, in tincidunt neque lobortis. Sed congue feugiat lorem in dignissim. Duis condimentum sapien sodales bibendum vulputate. Fusce viverra ut magna nec dignissim. Nullam tellus nunc, ultricies id quam vitae, ultricies pharetra nisi. Duis volutpat, ligula ultrices sagittis volutpat, magna nulla volutpat libero, interdum tristique felis libero sit amet lacus. Cras lacinia dictum elit eget tristique. Vestibulum nisl mi, efficitur non porta id, pretium quis sem. Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae; Aliquam gravida ante nec libero dignissim tristique.</p>
+  <p>This is the homepage of <a href="https://github.com/self-adjoint" target="_blank">self-adjoint</a></p>
+  <p>
+    What does "self-adjoint" mean? For matrices, it means the same as "Hermitian", i.e. a matrix that is equal to its conjugate transpose: $A^{\textsf{H}}=A$.
+    All of the Pauli matrices are self-adjoint:
+    $$
+      \sigma_x = \begin{pmatrix}
+        0 & 1 \\
+        1 & 0
+      \end{pmatrix}
+      \qquad
+      \sigma_y = \begin{pmatrix}
+        0 & -i \\
+        i & 0
+      \end{pmatrix}
+      \qquad
+      \sigma_z = \begin{pmatrix}
+        1 & 0 \\
+        0 & -1
+      \end{pmatrix}
+    $$
+    More generally, for operators on a Hilbert space, it refers to an operator that is equal to its adjoint.
+    The position and momentum operators are self-adjoint:
+    $$
+      \widehat{x}\psi(x) = x\psi(x)
+      \qquad
+      \widehat{p}\psi(x) = -i\hbar\frac{d}{dx}\psi(x)
+    $$
+    The less mathematically inclined physicists might know these as <i>observables</i>.
+      <br><br>
+    Even more generally, for elements of a *-algebra, it refers to an element of the algebra that is equal to its adjoint,
+    i.e. a fixed point of the * operation. This is too abstract for practical use.
+  </p>
 
 <section id="sitemap">
   <h2>Site Map 🗺️</h2>
@@ -71,6 +106,20 @@
     </figure>
   </div>
 </section>
+
+<h2>Stirling's Formula</h2>
+
+As $n\to\infty$, the following asymptotic relation holds:
+$$
+    n! \sim \sqrt{2\pi n}\left(\frac{n}{e}\right)^n
+$$
+<p>
+  In 1730, <a href="https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/" target="_blank">Abraham de Moivre</a> (1667 – 1754)
+  showed that as $n\to\infty$, $n! \sim Cn^{n+\frac{1}{2}}e^{-n}$ for some constant $C$, and later that year,
+  <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Stirling/" target="_blank">James Stirling</a> (1692 – 1770) showed that $C=\sqrt{2\pi}$.
+</p>
+<p>This may occasionally be useful.</p>
+See <a href="https://kconrad.math.uconn.edu/blurbs/analysis/stirling.pdf" target="_blank">here</a> for a proof.
 
 </main>
 
