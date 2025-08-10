@@ -73,7 +73,6 @@
       font-size: 0.9rem;
     }
 
-
 ul {
   list-style-type: square;
   padding-left: 1.5rem;
@@ -107,7 +106,6 @@ section h2 {
   border-bottom: none;
 }
 
-
 /* Simple sections without a boarder */
 .simple-section {
   border: none;
@@ -125,16 +123,6 @@ section h2 {
   padding: 0;
   border-bottom: none;
 }
-
-
-
-
-
-
-
-
-
-
 
 #welcome h1 {
   color: var(--nord4)
