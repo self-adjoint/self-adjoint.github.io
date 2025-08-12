@@ -115,8 +115,8 @@
       <li>Physicists</li>
       <li>Greeks</li>
     </ol>
-  <div style="display: flex; align-items: flex-start; gap: 2rem;">
-    <table>
+  <div class="text-center" style="display: flex; align-items: flex-start; gap: 2rem;">
+    <table style="border: 1rem;margin-left: auto;margin-right: auto;">
       <tr>
         <th>Letter</th>
         <th>Uppercase</th>
@@ -246,6 +246,17 @@
   </div>
 </section>
 
+<h2>Wallis' Product</h2>
+$$
+    \frac{2}{1} \cdot \frac{2}{3} \cdot \frac{4}{3} \cdot \frac{4}{5} \cdot
+    \frac{6}{5} \cdot \frac{6}{7} \cdot \frac{8}{7} \cdot \frac{8}{9} \cdots
+    = \frac{\pi}{2}
+$$
+<p>
+    This was first discovered in 1656 by <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Wallis/" target="_blank">John Wallis</a> (1616 – 1703),
+    and is the first known expression for $\pi$ as an infinite product of fractions.
+</p>
+
 <h2>Stirling's Formula</h2>
 
 As $n\to\infty$, the following asymptotic relation holds:
@@ -259,6 +270,28 @@ $$
 </p>
 <p>This may occasionally be useful.</p>
 See <a href="https://kconrad.math.uconn.edu/blurbs/analysis/stirling.pdf" target="_blank">here</a> for a proof.
+
+<h2>Gaussian Integral</h2>
+$$
+    \int_{-\infty}^{\infty} e^{-x^2}\,dx = \sqrt{\pi}
+$$
+<p>
+  This was first published in 1809 by
+  <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Gauss/" target="_blank">Carl Friedrich Gauss</a> (1777 – 1855),
+  though its discovery is usually attributed to
+  <a href="https://mathshistory.st-andrews.ac.uk/Biographies/De_Moivre/" target="_blank">Abraham de Moivre</a> (1667 – 1754)
+  or
+  <a href="https://mathshistory.st-andrews.ac.uk/Biographies/Laplace/" target="_blank">Pierre-Simon Laplace</a> (1749 – 1827).
+</p>
+<p>
+  Statisticians may have trouble recognizing this formula due to its relative obscurity.
+  In their language, it would be written as $\frac{1}{\sqrt{2\pi}}\int_{-\infty}^{\infty} e^{-\frac{x^2}{2}}\,dx = 1$.
+</p>
+<p>
+  It's not normal to know why the normalization constant in the normal distribution is $\frac{1}{\sqrt{2\pi}}$,
+  and now you can impress your normal friends.
+</p>
+See <a href="https://kconrad.math.uconn.edu/blurbs/analysis/gaussianintegral.pdf" target="_blank">here</a> for a proof.
 
 </main>
 
