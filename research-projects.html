@@ -3,6 +3,12 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <script type="text/x-mathjax-config">
+    MathJax.Hub.Config({tex2jax: {inlineMath: [['$','$'], ['\\(','\\)']]}});
+  </script>
+  <script type="text/javascript"
+    src="https://cdn.mathjax.org/mathjax/latest/MathJax.js?config=TeX-AMS-MML_HTMLorMML">
+  </script>
   <title>Research & Projects</title>
   <link rel="stylesheet" href="style.css" />
 </head>
@@ -45,7 +51,33 @@ further resources where available.</p>
         <li><a href="https://arxiv.org/abs/2104.09819" target="_blank">A Result on Convergence of Double Sequences of Measurable Functions</a> (<a href="https://arxiv.org/pdf/2104.09819" target="_blank">PDF</a>)</li>
       </ul>
     </section>
+</section>
 
+<section id="rolling-dice">
+  <h2>Rolling Dice</h2>
+  <p>A few (potentially) useful results about expected values of certain die-rolling problems.</p>
+  <ul>
+    <li>
+
+    </li>
+    <li>
+        Suppose you roll a fair $n$-sided die (labeled $1,2,\ldots,n$) repeatedly until you get a <b>streak of $k$</b>,
+        i.e. $k$ consecutive rolls in strictly increasing order (not necessarily consecutive numbers). Then the expected
+        number of rolls is given by:
+        $$
+            E(n,k) = \frac{1}{\displaystyle\sum_{r=0}^{n} \psi_{k,r}\binom{n}{r}n^{-r}}
+        $$
+        Where:
+        $$
+            \psi_{k,r} = \begin{cases}
+                1 & r \equiv 0 \pmod{k} \\
+                1 & r \equiv 1 \pmod{k} \\
+                0 & \text{otherwise}
+            \end{cases}
+        $$
+    </li>
+    <li><a href="https://github.com/yourusername/ml-sandbox">GitHub Sandbox</a></li>
+  </ul>
 </section>
 
 <section id="ml-experiments">
