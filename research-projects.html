@@ -58,7 +58,11 @@ further resources where available.</p>
   <p>A few (potentially) useful results about expected values of certain die-rolling problems.</p>
   <ul>
     <li>
-
+        Suppose you roll a fair $n$-sided die (labeled $1,2,\ldots,n$) repeatedly until the sum of your rolls is at least $k$.
+        Then the expected number of rolls is given by:
+        $$
+            E(n,k) = \sum_{r=0}^{\lceil\frac{k}{n+1}-1\rceil} \binom{k-nr-1}{r}\left(-\frac{1}{n}\right)^r\left(1+\frac{1}{n}\right)^{k-(n+1)r-1}
+        $$
     </li>
     <li>
         Suppose you roll a fair $n$-sided die (labeled $1,2,\ldots,n$) repeatedly until you get a <b>streak of $k$</b>,
