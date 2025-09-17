@@ -54,34 +54,59 @@ further resources where available.</p>
 </section>
 
 <section id="rolling-dice">
-  <h2>Rolling Dice</h2>
-  <p>A few (potentially) useful results about expected values of certain die-rolling problems.</p>
-  <ul>
-    <li>
-        Suppose you roll a fair $n$-sided die (labeled $1,2,\ldots,n$) repeatedly until the sum of your rolls is at least $k$.
-        Then the expected number of rolls is given by:
-        $$
-            E(n,k) = \sum_{r=0}^{\lceil\frac{k}{n+1}-1\rceil} \binom{k-nr-1}{r}\left(-\frac{1}{n}\right)^r\left(1+\frac{1}{n}\right)^{k-(n+1)r-1}
-        $$
-    </li>
-    <li>
-        Suppose you roll a fair $n$-sided die (labeled $1,2,\ldots,n$) repeatedly until you get a <b>streak of $k$</b>,
-        i.e. $k$ consecutive rolls in strictly increasing order (not necessarily consecutive numbers). Then the expected
-        number of rolls is given by:
-        $$
-            E(n,k) = \frac{1}{\displaystyle\sum_{r=0}^{n} \psi_{k,r}\binom{n}{r}n^{-r}}
-        $$
-        Where:
-        $$
-            \psi_{k,r} = \begin{cases}
-                1 & r \equiv 0 \pmod{k} \\
-                1 & r \equiv 1 \pmod{k} \\
-                0 & \text{otherwise}
-            \end{cases}
-        $$
-    </li>
-    <li><a href="https://github.com/yourusername/ml-sandbox">GitHub Sandbox</a></li>
-  </ul>
+    <h2>Rolling Dice</h2>
+    <p>
+        A few (potentially) useful results about expected values of certain die-rolling problems.
+
+        Suppose you roll a fair $n$-sided die (labeled $1,2,\ldots,n$) repeatedly until a certain event occurs (examples are given below).
+      What is the expected number $E$ of rolls you would have to make?
+    </p>
+    <ul>
+        <li>
+            Sum of rolls is at least $k$:
+            $$
+                E(n,k) = \sum_{r=0}^{\lceil\frac{k}{n+1}-1\rceil} \binom{k-nr-1}{r}\left(-\frac{1}{n}\right)^r\left(1+\frac{1}{n}\right)^{k-(n+1)r-1}
+            $$
+        </li>
+        <li>
+            Streak of $k$ rolls, i.e. $k$ consecutive rolls in strictly increasing order:
+            $$
+                E(n,k) = \frac{1}{\displaystyle\sum_{r=0}^{n} \psi_{k,r}\binom{n}{r}n^{-r}}
+            $$
+            $$
+                E(n,k) = \frac{1}{\displaystyle\sum_{r=1}^{k-1} \left(1-\omega_k^{-r}\right)\left(1+\omega_k^r z\right)^n}
+            $$
+        </li>
+        <li>
+            Soft streak of $k$ rolls, i.e. $k$ consecutive rolls in non-decreasing order:
+            $$
+                E(n,k) = \frac{1}{\displaystyle\sum_{r=0}^{n} \psi_{k,r}\mathcal{B}(n,k,r)n^{-r}}
+            $$
+            $$
+                E(n,k) = \frac{1}{\displaystyle\sum_{r=1}^{k-1} \left(1-\omega_k^{-r}\right)\left(1-\omega_k^r z\right)^{-n}}
+            $$
+        </li>
+    </ul>
+    <h3>Notation</h3>
+    <ul>
+        <li>
+            $\omega_k=e^{\tfrac{2\pi i}{k}}$ is the principal $k$<sup>th</sup> root of unity.
+        </li>
+        <li>
+            $\psi_{k,r}$ is defined as follows:
+            $$
+                \psi_{k,r} = \begin{cases}
+                    1 & r \equiv 0 \pmod{k} \\
+                    1 & r \equiv 1 \pmod{k} \\
+                    0 & \text{otherwise}
+                \end{cases}
+            $$
+        </li>
+        <li>
+            $\mathcal{B}(n,k,r)$ is the coefficient of $x^r$ in the expansion of $\left(1+x+x^2+\cdots+x^{k-1}\right)^n$.
+        </li>
+    </ul>
+
 </section>
 
 <section id="ml-experiments">
